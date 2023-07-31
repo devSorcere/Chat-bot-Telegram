@@ -233,12 +233,152 @@ bot.action('shortSellingQuestions', (ctx) => {
             reply_markup: {
                 inline_keyboard: [
                     [
-                        { text: "More Questions", callback_data: 'moreShortSellingQuestions' }
+                        { text: "More Questions", callback_data: 'shortSellingQuestionTwo' }
                     ],
                 ]
             }
         })
 })
+
+
+
+bot.action('shortSellingQuestionTwo', (ctx) => {
+    bot.telegram.sendMessage(ctx.chat.id, questions.shortSellingQuestionsTWO,
+        {
+            reply_markup: {
+                inline_keyboard: [
+                    [
+                        { text: "More Questions", callback_data: 'shortSellingQuestionTHREE' }
+                    ],
+                ]
+            }
+        })
+})
+
+bot.action('shortSellingQuestionTHREE', (ctx) => {
+    bot.telegram.sendMessage(ctx.chat.id, questions.shortSellingQuestionsTHREE,
+        {
+            reply_markup: {
+                inline_keyboard: [
+                    [
+                        { text: "More Questions", callback_data: 'shortSellingQuestionFOUR' }
+                    ],
+                ]
+            }
+        })
+})
+
+
+bot.action('shortSellingQuestionFOUR', (ctx) => {
+    bot.telegram.sendMessage(ctx.chat.id, questions.shortSellingQuestionsFOUR,
+        {
+            reply_markup: {
+                inline_keyboard: [
+                    [
+                        { text: "More Questions", callback_data: 'shortSellingQuestionFIVE' }
+                    ],
+                ]
+            }
+        })
+})
+
+bot.action('shortSellingQuestionFIVE', (ctx) => {
+    bot.telegram.sendMessage(ctx.chat.id, questions.shortSellingQuestionsFIVE,
+        {
+            reply_markup: {
+                inline_keyboard: [
+                    [
+                        { text: "More Questions", callback_data: 'shortSellingQuestionSIX' }
+                    ],
+                ]
+            }
+        })
+})
+
+
+bot.action('shortSellingQuestionSIX', (ctx) => {
+    bot.telegram.sendMessage(ctx.chat.id, questions.shortSellingQuestionsSIX,
+        {
+            reply_markup: {
+                inline_keyboard: [
+                    [
+                        { text: "More Questions", callback_data: 'shortSellingQuestionSEVEN' }
+                    ],
+                ]
+            }
+        })
+})
+
+
+bot.action('shortSellingQuestionSEVEN', (ctx) => {
+    bot.telegram.sendMessage(ctx.chat.id, questions.shortSellingQuestionsSEVEN,
+        {
+            reply_markup: {
+                inline_keyboard: [
+                    [
+                        { text: "More Questions", callback_data: 'shortSellingQuestionEIGHT' }
+                    ],
+                ]
+            }
+        })
+})
+
+
+bot.action('shortSellingQuestionEIGHT', (ctx) => {
+    bot.telegram.sendMessage(ctx.chat.id, questions.shortSellingQuestionsEIGHT,
+        {
+            reply_markup: {
+                inline_keyboard: [
+                    [
+                        { text: "More Questions", callback_data: 'shortSellingQuestionNINE' }
+                    ],
+                ]
+            }
+        })
+})
+
+bot.action('shortSellingQuestionNINE', (ctx) => {
+    bot.telegram.sendMessage(ctx.chat.id, questions.shortSellingQuestionsNINE,
+        {
+            reply_markup: {
+                inline_keyboard: [
+                    [
+                        { text: "More Questions", callback_data: 'shortSellingQuestionTEN' }
+                    ],
+                ]
+            }
+        })
+})
+
+bot.action('shortSellingQuestionTEN', (ctx) => {
+    bot.telegram.sendMessage(ctx.chat.id, questions.shortSellingQuestionsTEN,
+        {
+            reply_markup: {
+                inline_keyboard: [
+                    [
+                        { text: "More Questions", callback_data: 'shortSellingQuestionELEVEN' }
+                    ],
+                ]
+            }
+        })
+})
+
+bot.action('shortSellingQuestionELEVEN', (ctx) => {
+    bot.telegram.sendMessage(ctx.chat.id, questions.shortSellingQuestionsELEVEN,
+        {
+            reply_markup: {
+                inline_keyboard: [
+                    [
+                        { text: "General Questions", callback_data: 'GeneralQuestions' }
+                    ],
+                    [
+                        {text:'PIVOT Questions', callback_data :'PivotQuestions'}
+                    ]
+                ]
+            }
+        })
+})
+
 
 bot.action('GeneralQuestions', (ctx) => {
     bot.telegram.sendMessage(ctx.chat.id, questions.GeneralQuestions)
@@ -247,17 +387,6 @@ bot.action('GeneralQuestions', (ctx) => {
 bot.action('PivotQuestions', (ctx) => {
     bot.telegram.sendMessage(ctx.chat.id, questions.PivotQuestions)
 })
-
-
-bot.action('moreShortSellingQuestions', (ctx) => {
-    ctx.reply(questions.moreShortSellingQuestions)
-})
-
-bot.hears('/More_Question', (ctx) => {
-    ctx.reply(questions.moreShortSellingQuestions)
-})
-
-
 
 bot.action('categories', ctx => {
     let startMessage = `

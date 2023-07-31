@@ -1,0 +1,23 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": "18.16.0"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "heroku": "^8.1.9",
+    "mongodb": "^5.7.0",
+    "node-telegram-bot-api": "^0.61.0",
+    "telegraf": "^4.12.2",
+    "telegraph": "^0.8.22",
+    "telegraph-node": "^1.0.4"
+  }
+}
